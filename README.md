@@ -105,8 +105,7 @@ $$
 P_k = -\overline{u'v'}\frac{dU}{dy},\quad P_{11} = 2P_k.
 $$
 
-The saved `uu` PINN supplies fixed $\nu_t$. The NN predicts the complete $\Phi_{11}$ from the current solved stress, $k$, $P_k$ and $P_{11}$; `--no-nn` uses the standard AE.8 pressure-strain closure instead. DNS supplies $U$, $\overline{u'v'}$, $\overline{v'^2}$, $\overline{w'^2}$ and $\varepsilon$, while $k$ updates with the solved stress. The wall condition is $\overline{u'^2} = 0$, with zero diffusive flux at the channel centre. The approximation $2\varepsilon/3$ differs from the component dissipation used to train the PINN. Further derivation is in [RANS0_uu_notes.md](RANS0_uu_notes.md).
-
+The saved `uu` PINN supplies fixed $\nu_t$. The NN predicts the complete $\Phi_{11}$ from the current solved stress, $k$, $P_k$ and $P_{11}$; `--no-nn` uses the standard AE.8 pressure-strain closure instead. DNS supplies $U$, $\overline{u'v'}$, $\overline{v'^2}$, $\overline{w'^2}$ and $\varepsilon$, while $k$ updates with the solved stress. The wall condition is $\overline{u'^2} = 0$, with zero diffusive flux at the channel centre. The approximation $2\varepsilon/3$ differs from the component dissipation used to train the PINN.
 ## Run Instructions
 
 Run these commands from the project folder after completing the setup above.
